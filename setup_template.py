@@ -33,7 +33,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url='https://github.com/lucascbarbosa/st-cytoscape',
     author='Lucas Barbosa',
-    author_email='lucas.barbosa@murabe.com',
+    author_email='lucas.barbosa@murabei.com',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
