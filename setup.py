@@ -23,8 +23,8 @@ except Exception:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setuptools.setup(
-    name='st-cytoscape',
-    version='0.2',
+    name='murabei-st-cytoscape',
+    version='0.3',
     include_package_data=True,
     license='BSD-3-Clause License',
     description=(
@@ -33,7 +33,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url='https://github.com/lucascbarbosa/st-cytoscape',
     author='Lucas Barbosa',
-    author_email='lucas.barbosa@murabei.com',
+    author_email='lucas.barbosa@murabe.com',
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
