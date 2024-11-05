@@ -24,6 +24,7 @@ def cytoscape(
     user_panning_enabled=True,
     min_zoom=1e-50,
     max_zoom=1e50,
+    wheelSensitivity=1,
     key=None,
 ):
     """Creates a new instance of a Cytoscape.js graph.
@@ -85,6 +86,7 @@ def cytoscape(
         maxZoom=max_zoom,
         key=key,
         default=default,
+        wheelSensitivity=wheelSensitivity,
     )
     return component_value
 
