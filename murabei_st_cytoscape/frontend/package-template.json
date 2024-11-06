@@ -1,5 +1,5 @@
 {
-  "name": "st_cytoscape",
+  "name": "murabei_st_cytoscape",
   "version": "{VERSION}",
   "private": true,
   "dependencies": {

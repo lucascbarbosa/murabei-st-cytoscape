@@ -6,6 +6,7 @@ sed -e 's#{VERSION}#'"${VERSION}"'#g' st_cytoscape/frontend/package-template.jso
 # Build component
 # cd st_cytoscape/frontend
 # npm install
+# npm audit fix
 # npm run build
 
 # Build wheel
