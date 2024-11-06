@@ -6,8 +6,8 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
-    name="st-cytoscape",
-    version="0.7.5",
+    name="murabei-st-cytoscape",
+    version="0.7.6",
     author="Lucas Barbosa",
     author_email="lucas.barbosa@murabei.com",
     description="A Streamlit component to display a Cytoscape.js graph",

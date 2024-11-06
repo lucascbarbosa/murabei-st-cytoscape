@@ -1,17 +1,17 @@
 import os
 import streamlit.components.v1 as components
 
-_RELEASE = True
+_RELEASE = False
 
 if not _RELEASE:
-    st_cytoscape = components.declare_component(
-        "st_cytoscape", url="http://localhost:3001",
+    murabei_st_cytoscape = components.declare_component(
+        "murabei_st_cytoscape", url="http://localhost:3001",
     )
 
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    st_cytoscape = components.declare_component("st_cytoscape", path=build_dir)
+    murabei_st_cytoscape = components.declare_component("murabei_st_cytoscape", path=build_dir)
 
 
 def cytoscape(
@@ -76,7 +76,7 @@ def cytoscape(
                 else:
                     default["nodes"].append(e["data"]["id"])
 
-    component_value = st_cytoscape(
+    component_value = murabei_st_cytoscape(
         elements=elements,
         stylesheet=stylesheet,
         width=width,
