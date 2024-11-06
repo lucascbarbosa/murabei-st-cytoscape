@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
-    name="st-cytoscape",
+    name="murabei-st-cytoscape",
     version="0.7.7",
     author="Lucas Barbosa",
     author_email="lucas.barbosa@murabei.com",
