@@ -21,6 +21,7 @@ sed -e 's#{VERSION}#'"${VERSION}"'#g' murabei_st_cytoscape/frontend/package-temp
 # # Upload to PyPI
 # python -m twine upload --repository testpypi dist/*
 
-# # Commit all
-# git add --all
-# git commit -m "Building a new version ${VERSION}"
+# Commit all
+git add --all
+git commit -m "Building a new version ${VERSION}"
+git push
