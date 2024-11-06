@@ -1,17 +1,17 @@
 import os
 import streamlit.components.v1 as components
 
-_RELEASE = False
+_RELEASE = True
 
 if not _RELEASE:
-    _component_func = components.declare_component(
+    st_cytoscape = components.declare_component(
         "st_cytoscape", url="http://localhost:3001",
     )
 
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    _component_func = components.declare_component("st_cytoscape", path=build_dir)
+    st_cytoscape = components.declare_component("st_cytoscape", path=build_dir)
 
 
 def cytoscape(
@@ -53,11 +53,13 @@ def cytoscape(
         Cf. https://js.cytoscape.org/#core/initialisation
     max_zoom: float
         Cf. https://js.cytoscape.org/#core/initialisation
+    wheelSensitivity: float
+        Cf. https://js.cytoscape.org/#core/initialisation
     key: str or None
         An optional key that uniquely identifies this component. If this is
         None, and the component's arguments are changed, the component will
         be re-mounted in the Streamlit frontend and lose its current state.
-
+    
     Returns
     -------
     dict
@@ -74,7 +76,7 @@ def cytoscape(
                 else:
                     default["nodes"].append(e["data"]["id"])
 
-    component_value = _component_func(
+    component_value = st_cytoscape(
         elements=elements,
         stylesheet=stylesheet,
         width=width,
